@@ -30,3 +30,8 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
+html,
+body {
+  height: 100%;
+}
