@@ -28,7 +28,7 @@ body {
   text-align: center;
   border-radius: 260px;
   padding-inline: clamp(30px, 3vw, 45px);
-  padding-block: clamp(10px, 2vw, 35px);
+  padding-block: clamp(10px, 1.5vw, 35px);
   font-size: clamp(16px, 1vw, 32px);
 }
 
@@ -92,6 +92,7 @@ body {
   }
 }
 
+/* --------- */
 .menu {
 
 }
@@ -116,27 +117,23 @@ body {
 }
 
 /* -------- */
-.page {
-  padding-top: clamp(100px, 7.5vw, 200px);
-}
-
-@media (width <= 630px) {
-  .page {
-    padding-top: 160px;
-  }
-}
-/* --------- */
-
 .hero {
-
+  min-height: 100svh;
+  background-color: #E6DAC0;
+  padding-top: clamp(100px, 7.5vw, 200px);
+  display: flex;
+  align-items: flex-end;
 }
 
 .hero__container {
-
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
 .hero__content {
-
+  flex-grow: 1;
+  flex-basis: 100px;
 }
 
 .hero__title {
@@ -156,11 +153,16 @@ body {
 }
 
 .hero__picture {
-
+  flex-grow: 1;
+  flex-basis: 100px;
 }
 
 .hero__image {
 
 }
 
-
+@media (width <= 630px) {
+  .hero {
+    padding-top: 160px;
+  }
+}
