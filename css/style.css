@@ -32,8 +32,19 @@ body {
   font-size: clamp(16px, 1vw, 32px);
 }
 
-.button--dark {
+.button:hover {
+  background-color: #000;
+  color: #fff;
+}
 
+.button--dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.button--dark:hover {
+  background-color: #fff;
+  color: #000;
 }
 /* --------- */
 
@@ -86,7 +97,7 @@ body {
   color: #fff;
 }
 
-@media (width <= 380px) {
+@media (width <= 400px) {
   .header__button {
     align-self: stretch;
   }
@@ -137,15 +148,31 @@ body {
 }
 
 .hero__title {
+  font-weight: 600;
+  font-size: clamp(20px, 5vw, 128px);
+}
 
+.hero__title:not(:last-child) {
+  margin-bottom: 0.1875em;
 }
 
 .hero__text {
+  line-height: 1.5;
+  font-size: clamp(16px, 1vw, 40px);
+}
 
+.hero__text p:not(:last-child) {
+  margin-bottom: 0.4em;
+}
+
+.hero__text:not(:last-child) {
+  margin-bottom: 1.6em;
 }
 
 .hero__buttons {
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: calmp(10px, 1vw, 28px);
 }
 
 .hero__button {
@@ -164,5 +191,27 @@ body {
 @media (width <= 630px) {
   .hero {
     padding-top: 160px;
+  }
+}
+
+@media (width <= 992px) {
+  .hero__container {
+    flex-direction: column;
+  }
+
+  .hero__content {
+    text-align: center;
+  }
+
+  .hero__buttons {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (width <= 400px) {
+  .header__buttons {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
