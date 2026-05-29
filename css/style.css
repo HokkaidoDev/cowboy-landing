@@ -22,6 +22,7 @@ body {
 /* Components */
 .button {
   background-color: #fff;
+  color: #000;
   transition: 
     background-color, 0.3s,
     color, 0.3s;
@@ -53,6 +54,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 50;
   background-color: #E6DAC0;
   padding-block: clamp(15px, 1vw, 42px);
 }
@@ -145,6 +147,7 @@ body {
 .hero__content {
   flex-grow: 1;
   flex-basis: 100px;
+  padding-block: clamp(20px, 2vw, 40px);
 }
 
 .hero__title {
@@ -182,6 +185,7 @@ body {
 .hero__picture {
   flex-grow: 1;
   flex-basis: 100px;
+  align-self: flex-end;
 }
 
 .hero__image {
@@ -215,3 +219,53 @@ body {
     align-items: stretch;
   }
 }
+/* --------------- */
+
+.models {
+  
+}
+
+.models__container {
+  display: flex;
+  min-height: 100svh;
+}
+
+.models__item {
+
+}
+
+.item-model {
+  position: relative;
+  flex-basis: 50%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.item-model__content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  
+}
+
+.item-model__title {
+
+}
+
+.item-model__text {
+
+}
+
+.item-model__button {
+
+}
+
+.item-model__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
